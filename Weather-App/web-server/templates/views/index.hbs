@@ -5,29 +5,36 @@
 <head>
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
+     <script src="https://stockpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <div class="main-content">
+
         {{>header}}
 
         <p>Use this site to get your weather!</p>
-
+        {{!-- form for the user to add their location.  --}}
         <form>
-            <input placeholder="Location">
+            <input placeholder="Enter Your Location">
             <button>Search</button>
         </form>
 
-
+{{!-- elements to have be able to use the queryselector and using id to be able to target it as there are multiple P tags --}}
         <p id="message-1"></p>
         <p id="message-2"></p>
     
     </div>
 
     {{>footer}}
-
+{{!-- we link the script here so it because it has to run JS to get the location, but in the other Hbs pages we just reference the values that were able to render using handlebars --}}
     <script src="/js/app.js"></script>
+     <!-- Add Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.7/umd/popper.min.js"></script>
+    <script src="https://stockpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"/></script>
 </body>
 
 </html>
+
